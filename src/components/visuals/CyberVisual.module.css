@@ -1,0 +1,110 @@
+.terminal {
+  width: 200px;
+  background: #0d1117;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.dotRed { width: 7px; height: 7px; border-radius: 50%; background: #f85149; }
+.dotYellow { width: 7px; height: 7px; border-radius: 50%; background: #d29922; }
+.dotGreen { width: 7px; height: 7px; border-radius: 50%; background: #3fb950; }
+
+.line {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  margin-bottom: 4px;
+  height: 14px;
+  min-height: 14px;
+}
+
+.lineGreen { color: #3fb950; }
+.lineGray { color: #6e7681; }
+.lineYellow { color: #d29922; }
+
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: #3fb950;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.shield {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.shieldInner {
+  position: relative;
+}
+
+.shieldShape {
+  width: 44px;
+  height: 50px;
+  border: 2px solid rgba(22, 163, 74, 0.4);
+  border-radius: 3px 3px 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shieldCheck {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.ring {
+  position: absolute;
+  border: 1.5px solid rgba(22, 163, 74, 0.15);
+  border-radius: 3px 3px 50% 50%;
+  animation: ringGrow 3s ease-in-out infinite;
+}
+
+.ring1 { inset: -6px; }
+.ring2 { inset: -14px; animation-delay: 1s; }
+
+@keyframes ringGrow {
+  0%, 100% { opacity: 0; transform: scale(0.9); }
+  50% { opacity: 0.5; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    width: 160px;
+    padding: 10px;
+  }
+
+  .line {
+    font-size: 8px;
+  }
+
+  .shield {
+    top: 10px;
+    right: 10px;
+  }
+
+  .shieldShape {
+    width: 34px;
+    height: 40px;
+  }
+}

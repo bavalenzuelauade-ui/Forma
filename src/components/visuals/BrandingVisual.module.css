@@ -1,0 +1,196 @@
+.phone {
+  width: 90px;
+  height: 160px;
+  background: var(--text);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 7px;
+  background: #333;
+  border-radius: 0 0 8px 8px;
+  z-index: 2;
+}
+
+.screen {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #f9f6f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 8px;
+  animation: vScroll 5s ease-in-out infinite;
+}
+
+@keyframes vScroll {
+  0%, 15% { transform: translateY(0); }
+  45%, 55% { transform: translateY(-35px); }
+  85%, 100% { transform: translateY(0); }
+}
+
+.logoDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-bottom: 8px;
+}
+
+.bar {
+  width: 85%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.barGold { background: rgba(184, 134, 11, 0.15); }
+.barShort { width: 55%; }
+
+.cardSm {
+  width: 90%;
+  height: 24px;
+  background: rgba(184, 134, 11, 0.06);
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.ctaSm {
+  width: 65%;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.browser {
+  width: 200px;
+  height: 130px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  transform: scale(0.75);
+  transform-origin: bottom right;
+}
+
+.browserBar {
+  height: 20px;
+  background: #f5f0e8;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 4px;
+}
+
+.browserDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.urlBar {
+  flex: 1;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.browserBody {
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.colWide { flex: 2; }
+
+.colBar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+
+.colHero {
+  height: 30px;
+  background: rgba(184, 134, 11, 0.08);
+  border-radius: 2px;
+}
+
+.colCta {
+  width: 50%;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.cursor {
+  position: absolute;
+  animation: cursorDrift 4s ease-in-out infinite;
+}
+
+@keyframes cursorDrift {
+  0%, 100% { top: 40px; left: 40px; transform: rotate(0deg); }
+  35% { top: 65px; left: 100px; transform: rotate(5deg); }
+  65% { top: 50px; left: 150px; transform: rotate(-3deg); }
+}
+
+.floatCard {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-size: 9px;
+  font-weight: 600;
+  left: 16px;
+  top: 20px;
+  color: var(--gold-text);
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floatInner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.floatDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}

@@ -1,0 +1,101 @@
+.glow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.3;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.35; transform: scale(1.1); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.node {
+  padding: 8px 14px;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.nodePrimary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.connector {
+  width: 20px;
+  height: 2px;
+  background: rgba(37, 99, 235, 0.2);
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  top: -1.5px;
+  animation: flowDot 2s ease-in-out infinite;
+}
+
+@keyframes flowDot {
+  0% { left: -4px; opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { left: 16px; opacity: 0; }
+}
+
+.vline {
+  width: 2px;
+  height: 14px;
+  background: rgba(37, 99, 235, 0.15);
+  position: relative;
+}
+
+.vlineDot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  left: -1.5px;
+  animation: flowDotV 2.5s ease-in-out infinite;
+}
+
+@keyframes flowDotV {
+  0% { top: -4px; opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { top: 10px; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .node {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+
+  .connector {
+    width: 12px;
+  }
+}
