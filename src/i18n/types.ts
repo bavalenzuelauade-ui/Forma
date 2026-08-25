@@ -45,6 +45,20 @@ export interface Dictionary {
       details: { title: string; desc: string }[];
     }[];
   };
+  diagnostic: {
+    label: string;
+    titlePre: string;
+    titleEm: string;
+    desc: string;
+    formName: string;
+    formEmail: string;
+    formBusiness: string;
+    formFile: string;
+    formFileHint: string;
+    formSend: string;
+    formSuccess: string;
+    formSuccessDesc: string;
+  };
   process: {
     label: string;
     steps: string[];

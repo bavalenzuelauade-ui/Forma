@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import Specializations from '@/components/Specializations';
 import AboutUs from '@/components/AboutUs';
 import Process from '@/components/Process';
+import Diagnostic from '@/components/Diagnostic';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -60,6 +61,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
         <Specializations />
         <AboutUs />
         <Process />
+        <Diagnostic />
         <CTA />
       </main>
       <Footer />

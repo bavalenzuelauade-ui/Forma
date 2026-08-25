@@ -84,6 +84,20 @@ const es: Dictionary = {
       },
     ],
   },
+  diagnostic: {
+    label: 'Diagnostico gratuito',
+    titlePre: 'Probá ',
+    titleEm: 'nuestro trabajo',
+    desc: 'Envianos tu logo o identidad actual y te devolvemos un diagnostico personalizado con ideas concretas para mejorar tu marca. Sin compromiso, sin costo — queremos que veas de primera mano como trabajamos.',
+    formName: 'Tu nombre',
+    formEmail: 'Tu email',
+    formBusiness: 'Contanos brevemente sobre tu negocio o proyecto...',
+    formFile: 'Subir logo o material de marca',
+    formFileHint: 'PNG, JPG, PDF o SVG (max 5 MB)',
+    formSend: 'Enviar para diagnostico',
+    formSuccess: 'Recibimos tu marca',
+    formSuccessDesc: 'Te vamos a responder con un diagnostico personalizado en las proximas 48hs. Revisamos cada caso a mano.',
+  },
   process: {
     label: 'Como trabajamos',
     steps: [

@@ -84,6 +84,20 @@ const en: Dictionary = {
       },
     ],
   },
+  diagnostic: {
+    label: 'Free diagnostic',
+    titlePre: 'Try ',
+    titleEm: 'our work',
+    desc: 'Send us your logo or current brand identity and we\'ll give you a personalized diagnostic with concrete ideas to improve your brand. No strings attached — we want you to see firsthand how we work.',
+    formName: 'Your name',
+    formEmail: 'Your email',
+    formBusiness: 'Tell us briefly about your business or project...',
+    formFile: 'Upload logo or brand material',
+    formFileHint: 'PNG, JPG, PDF, or SVG (max 5 MB)',
+    formSend: 'Submit for diagnostic',
+    formSuccess: 'We got your brand',
+    formSuccessDesc: 'We\'ll reply with a personalized diagnostic within 48 hours. Every case is reviewed by hand.',
+  },
   process: {
     label: 'How we work',
     steps: [
