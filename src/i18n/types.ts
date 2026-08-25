@@ -40,6 +40,14 @@ export interface Dictionary {
     titleEnd: string;
     desc: string;
     btn: string;
+    whatsapp: string;
+    whatsappLabel: string;
+    formName: string;
+    formEmail: string;
+    formMessage: string;
+    formSend: string;
+    formSuccess: string;
+    formOr: string;
   };
   footer: {
     name: string;

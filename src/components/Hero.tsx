@@ -29,8 +29,8 @@ export default function Hero() {
           {dict.hero.subtitle}
         </p>
         <div className={styles.buttons}>
-          <button className={styles.btnPrimary}>{dict.hero.btnPrimary}</button>
-          <button className={styles.btnSecondary}>{dict.hero.btnSecondary}</button>
+          <a href="#contacto" className={styles.btnPrimary}>{dict.hero.btnPrimary}</a>
+          <a href="#servicios" className={styles.btnSecondary}>{dict.hero.btnSecondary}</a>
         </div>
       </div>
     </section>

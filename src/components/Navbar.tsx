@@ -38,7 +38,7 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <button className={styles.cta}>{dict.nav.cta}</button>
+          <a href="#contacto" className={styles.cta}>{dict.nav.cta}</a>
         </div>
         <button
           className={`${styles.menuBtn} ${menuOpen ? styles.menuOpen : ''}`}
