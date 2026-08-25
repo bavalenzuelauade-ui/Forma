@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 import { useLocale } from '@/i18n/context';
 import styles from './Specializations.module.css';
@@ -23,34 +23,61 @@ function StepVisualContent({ color, inView }: { color: string; inView: boolean }
   }
 }
 
-function Step({ stepData, color, reverse }: { stepData: { num: string; title: string; desc: string; tags: string[] }; color: string; reverse: boolean }) {
+function Step({ stepData, color, reverse, expanded, onToggle }: {
+  stepData: { num: string; title: string; desc: string; tags: string[] };
+  color: string;
+  reverse: boolean;
+  expanded: boolean;
+  onToggle: () => void;
+}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.1 });
   const colorClass = styles[color as keyof typeof styles] || '';
 
   return (
     <ScrollReveal
-      className={`${styles.step} ${reverse ? styles.stepReverse : ''} ${colorClass}`}
+      className={`${styles.step} ${reverse ? styles.stepReverse : ''} ${colorClass} ${expanded ? styles.stepExpanded : ''}`}
     >
-      <div className={styles.stepText} ref={ref}>
-        <div className={styles.stepNum}>{stepData.num}</div>
-        <div className={styles.stepTitle}>{stepData.title}</div>
-        <div className={styles.stepDesc}>{stepData.desc}</div>
-        <div className={styles.stepTags}>
-          {stepData.tags.map((tag) => (
-            <span key={tag} className={styles.stepTag}>{tag}</span>
-          ))}
+      <div className={styles.stepMain} onClick={onToggle} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle(); } }}>
+        <div className={styles.stepText} ref={ref}>
+          <div className={styles.stepNum}>{stepData.num}</div>
+          <div className={styles.stepTitle}>
+            {stepData.title}
+            <span className={`${styles.expandIcon} ${expanded ? styles.expandIconOpen : ''}`} aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </span>
+          </div>
+          <div className={styles.stepDesc}>{stepData.desc}</div>
+        </div>
+        <div className={styles.stepVisual}>
+          <StepVisualContent color={color} inView={inView} />
         </div>
       </div>
-      <div className={styles.stepVisual}>
-        <StepVisualContent color={color} inView={inView} />
-      </div>
+      {expanded && (
+        <div className={styles.expandPanel}>
+          <div className={styles.expandContent}>
+            {stepData.tags.map((tag) => (
+              <div key={tag} className={styles.subItem}>
+                <span className={styles.subDot} />
+                <span className={styles.subLabel}>{tag}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </ScrollReveal>
   );
 }
 
 export default function Specializations() {
   const { dict } = useLocale();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  function handleToggle(i: number) {
+    setOpenIndex(prev => prev === i ? null : i);
+  }
 
   return (
     <section id="servicios" className={styles.section}>
@@ -62,7 +89,14 @@ export default function Specializations() {
       </ScrollReveal>
 
       {dict.specializations.steps.map((step, i) => (
-        <Step key={step.num} stepData={step} color={COLORS[i]} reverse={REVERSES[i]} />
+        <Step
+          key={step.num}
+          stepData={step}
+          color={COLORS[i]}
+          reverse={REVERSES[i]}
+          expanded={openIndex === i}
+          onToggle={() => handleToggle(i)}
+        />
       ))}
     </section>
   );
