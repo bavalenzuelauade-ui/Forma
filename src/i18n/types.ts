@@ -28,6 +28,7 @@ export interface Dictionary {
       title: string;
       desc: string;
       tags: string[];
+      details: { title: string; desc: string }[];
     }[];
   };
   process: {

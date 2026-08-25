@@ -31,24 +31,42 @@ const en: Dictionary = {
         title: 'Branding + Web + App',
         desc: 'From visual identity to the complete digital experience. We create brands people remember and platforms where they engage.',
         tags: ['Product branding', 'App design', 'Landing pages', 'Brand from scratch'],
+        details: [
+          { title: 'Product branding', desc: 'Complete visual identity: logo, color palette, typography, brand guidelines, and every asset you need to communicate consistently across all channels.' },
+          { title: 'App design', desc: 'Interface design for mobile and web applications. Wireframes, interactive prototypes, and pixel-perfect final designs ready for development.' },
+          { title: 'Landing pages', desc: 'Conversion-optimized landing pages. Perfect for launches, ad campaigns, or quickly validating a business idea.' },
+          { title: 'Brand from scratch', desc: 'For projects starting from zero. We define naming, identity, communication strategy, and all digital assets to go to market.' },
+        ],
       },
       {
         num: '02',
         title: 'Automation',
         desc: 'We connect your tools so processes run on their own. Smart chatbots, workflows, and flows that eliminate repetitive work.',
         tags: ['Chatbots + WhatsApp', 'Workflows'],
+        details: [
+          { title: 'Chatbots + WhatsApp', desc: 'Smart bots that answer queries, schedule appointments, process orders, and serve customers 24/7 from WhatsApp, Instagram, or your website.' },
+          { title: 'Automated workflows', desc: 'We connect your tools (CRM, email, calendar, spreadsheets) so information flows on its own. Less manual work, fewer errors, more time for what matters.' },
+        ],
       },
       {
         num: '03',
         title: 'Cybersecurity',
         desc: 'We protect what you built. Audits, pentesting, and infrastructure hardening to keep your business secure.',
         tags: ['Audits + pentesting', 'Secure infrastructure'],
+        details: [
+          { title: 'Audits + pentesting', desc: 'We analyze your system looking for vulnerabilities before someone else finds them. Penetration tests, code review, and actionable reports with clear priorities.' },
+          { title: 'Secure infrastructure', desc: 'Secure configuration of servers, databases, and cloud services. Hardening, access monitoring, automated backups, and incident response.' },
+        ],
       },
       {
         num: '04',
         title: 'Digital product',
         desc: 'Dashboards, CRMs, and custom SaaS platforms. Digital products that scale with your business and users.',
         tags: ['CRM + dashboard', 'SaaS platform'],
+        details: [
+          { title: 'CRM + dashboard', desc: 'Custom management panels to visualize data, control operations, and make informed decisions. Every metric that matters, in one place.' },
+          { title: 'SaaS platform', desc: 'Full development of web platforms with users, roles, payments, and all business logic. From MVP to the version that scales with thousands of users.' },
+        ],
       },
     ],
   },

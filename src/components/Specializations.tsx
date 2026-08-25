@@ -24,7 +24,7 @@ function StepVisualContent({ color, inView }: { color: string; inView: boolean }
 }
 
 function Step({ stepData, color, reverse, expanded, onToggle }: {
-  stepData: { num: string; title: string; desc: string; tags: string[] };
+  stepData: { num: string; title: string; desc: string; tags: string[]; details: { title: string; desc: string }[] };
   color: string;
   reverse: boolean;
   expanded: boolean;
@@ -58,10 +58,13 @@ function Step({ stepData, color, reverse, expanded, onToggle }: {
       {expanded && (
         <div className={styles.expandPanel}>
           <div className={styles.expandContent}>
-            {stepData.tags.map((tag) => (
-              <div key={tag} className={styles.subItem}>
+            {stepData.details.map((detail) => (
+              <div key={detail.title} className={styles.subItem}>
                 <span className={styles.subDot} />
-                <span className={styles.subLabel}>{tag}</span>
+                <div className={styles.subText}>
+                  <span className={styles.subTitle}>{detail.title}</span>
+                  <span className={styles.subDesc}>{detail.desc}</span>
+                </div>
               </div>
             ))}
           </div>

@@ -31,24 +31,42 @@ const es: Dictionary = {
         title: 'Branding + Web + App',
         desc: 'Desde la identidad visual hasta la experiencia digital completa. Creamos marcas que la gente recuerda y plataformas donde interactuan.',
         tags: ['Product branding', 'App design', 'Landing', 'Marca desde cero'],
+        details: [
+          { title: 'Product branding', desc: 'Identidad visual completa: logo, paleta de colores, tipografia, guia de marca y todos los assets que necesitas para comunicar de forma coherente en cualquier canal.' },
+          { title: 'App design', desc: 'Diseno de interfaces para aplicaciones moviles y web. Wireframes, prototipos interactivos y el diseno final pixel-perfect listo para desarrollo.' },
+          { title: 'Landing pages', desc: 'Paginas de aterrizaje optimizadas para convertir. Ideales para lanzamientos, campanas publicitarias o validar una idea de negocio rapidamente.' },
+          { title: 'Marca desde cero', desc: 'Para proyectos que arrancan sin nada. Definimos nombre, identidad, estrategia de comunicacion y todos los materiales digitales para salir al mercado.' },
+        ],
       },
       {
         num: '02',
         title: 'Automatizacion',
         desc: 'Conectamos tus herramientas para que los procesos corran solos. Chatbots inteligentes, workflows y flujos que eliminan el trabajo repetitivo.',
         tags: ['Chatbots + WhatsApp', 'Workflows'],
+        details: [
+          { title: 'Chatbots + WhatsApp', desc: 'Bots inteligentes que responden consultas, agendan turnos, procesan pedidos y atienden clientes las 24hs desde WhatsApp, Instagram o tu web.' },
+          { title: 'Workflows automatizados', desc: 'Conectamos tus herramientas (CRM, email, calendario, planillas) para que la informacion fluya sola. Menos trabajo manual, menos errores, mas tiempo para lo importante.' },
+        ],
       },
       {
         num: '03',
         title: 'Ciberseguridad',
         desc: 'Protegemos lo que construiste. Auditorias, pentesting y hardening de infraestructura para que tu negocio este blindado.',
         tags: ['Auditoria + pentesting', 'Infraestructura segura'],
+        details: [
+          { title: 'Auditoria + pentesting', desc: 'Analizamos tu sistema buscando vulnerabilidades antes de que alguien mas las encuentre. Tests de penetracion, revision de codigo y reportes accionables con prioridades claras.' },
+          { title: 'Infraestructura segura', desc: 'Configuracion segura de servidores, bases de datos y servicios cloud. Hardening, monitoreo de accesos, backups automatizados y respuesta ante incidentes.' },
+        ],
       },
       {
         num: '04',
         title: 'Producto digital',
         desc: 'Dashboards, CRMs y plataformas SaaS a medida. Productos digitales que escalan con tu negocio y tus usuarios.',
         tags: ['CRM + dashboard', 'Plataforma SaaS'],
+        details: [
+          { title: 'CRM + dashboard', desc: 'Paneles de gestion a medida para visualizar datos, controlar operaciones y tomar decisiones informadas. Cada metrica que importa, en un solo lugar.' },
+          { title: 'Plataforma SaaS', desc: 'Desarrollo completo de plataformas web con usuarios, roles, pagos y toda la logica de negocio. Desde el MVP hasta la version que escala con miles de usuarios.' },
+        ],
       },
     ],
   },
