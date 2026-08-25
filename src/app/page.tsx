@@ -1,19 +1,22 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Specializations from '@/components/Specializations';
-import Process from '@/components/Process';
-import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
+'use client';
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Specializations />
-      <Process />
-      <CTA />
-      <Footer />
-    </>
-  );
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+function detectLocale(): string {
+  if (typeof navigator === 'undefined') return 'es';
+  const lang = navigator.language?.toLowerCase() ?? '';
+  if (lang.startsWith('en')) return 'en';
+  if (lang.startsWith('it')) return 'it';
+  return 'es';
+}
+
+export default function RootPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace(`/${detectLocale()}`);
+  }, [router]);
+
+  return null;
 }
