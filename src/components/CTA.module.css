@@ -167,6 +167,13 @@
   font-weight: 500;
 }
 
+.errorMsg {
+  color: #ff6b6b;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .section {

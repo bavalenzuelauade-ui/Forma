@@ -6,31 +6,44 @@ import styles from './CTA.module.css';
 import ScrollReveal from './ScrollReveal';
 
 const WA_NUMBER = '5492944713929';
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/bavalenzuelauade@gmail.com';
 
 export default function CTA() {
   const { dict } = useLocale();
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
   const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(dict.cta.whatsapp)}`;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
+    setError(false);
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
     try {
-      await fetch('/', {
+      const res = await fetch(FORMSUBMIT_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          message: data.get('message'),
+          _subject: 'Nuevo mensaje desde Forma Studio',
+          _template: 'table',
+        }),
       });
-      setSent(true);
-      form.reset();
+      if (res.ok) {
+        setSent(true);
+        form.reset();
+      } else {
+        setError(true);
+      }
     } catch {
-      setSent(true);
+      setError(true);
     } finally {
       setSending(false);
     }
@@ -72,15 +85,10 @@ export default function CTA() {
             </div>
           ) : (
             <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className={styles.form}
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <p hidden><label>Dont fill: <input name="bot-field" /></label></p>
+              {error && <p className={styles.errorMsg}>Error al enviar. Intentalo de nuevo.</p>}
               <input
                 type="text"
                 name="name"
