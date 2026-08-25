@@ -1,503 +1,480 @@
-.mockup {
+.scene {
   width: 100%;
   height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
 }
 
-/* ── Brand identity sheet ── */
-.brandSheet {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
+/* ── 01: Brand identity card ── */
+.brandCard {
+  width: 72px;
+  height: 52px;
+  background: #fff;
   border-radius: 8px;
-  padding: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  animation: gentleFloat 3s ease-in-out infinite;
 }
 
 .brandLogo {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: var(--text);
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: var(--gold);
 }
 
 .brandColors {
   display: flex;
-  gap: 4px;
+  gap: 3px;
 }
 
 .brandColors span {
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 
 .brandColors span:nth-child(1) { background: #1a1a1a; }
-.brandColors span:nth-child(2) { background: #b8860b; }
+.brandColors span:nth-child(2) { background: var(--gold); }
 .brandColors span:nth-child(3) { background: #e8dcc8; }
 .brandColors span:nth-child(4) { background: #f4f2ee; }
 
-.brandType {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: auto;
+.brandFloat {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--gold);
+  opacity: 0.25;
+  animation: gentleFloat 4s ease-in-out infinite reverse;
 }
 
-.brandTypeL {
-  height: 6px;
-  width: 70%;
+/* ── 01: Phone app ── */
+.phoneMini {
+  width: 48px;
+  height: 80px;
   background: var(--text);
-  border-radius: 3px;
-  opacity: 0.15;
-}
-
-.brandTypeS {
-  height: 4px;
-  width: 45%;
-  background: var(--text);
-  border-radius: 2px;
-  opacity: 0.1;
-}
-
-/* ── Phone / App ── */
-.phone {
-  width: 64px;
-  height: 100%;
-  background: #fff;
-  border-radius: 12px;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  padding: 4px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 2px;
+  animation: gentleFloat 3.5s ease-in-out infinite;
 }
 
 .phoneNotch {
-  width: 24px;
-  height: 4px;
-  border-radius: 2px;
-  background: rgba(0, 0, 0, 0.08);
-  margin: 2px auto 4px;
+  width: 20px;
+  height: 3px;
+  background: #333;
+  border-radius: 0 0 4px 4px;
+  margin: 0 auto 3px;
 }
 
-.phoneHeader {
-  height: 8px;
-  background: var(--text);
-  border-radius: 3px;
-  opacity: 0.08;
-  margin-bottom: 4px;
-}
-
-.phoneCards {
-  flex: 1;
+.phoneScroll {
+  background: #f9f6f0;
+  border-radius: 8px;
+  height: calc(100% - 6px);
+  padding: 6px 4px;
   display: flex;
   flex-direction: column;
   gap: 3px;
+  overflow: hidden;
+  animation: phoneScrollAnim 4s ease-in-out infinite;
 }
 
-.phoneCard {
-  flex: 1;
-  background: linear-gradient(135deg, rgba(184, 134, 11, 0.12), rgba(184, 134, 11, 0.06));
-  border-radius: 4px;
+@keyframes phoneScrollAnim {
+  0%, 20% { transform: translateY(0); }
+  40%, 60% { transform: translateY(-10px); }
+  80%, 100% { transform: translateY(0); }
 }
 
-.phoneNav {
-  display: flex;
-  justify-content: space-around;
-  padding: 3px 0 1px;
-}
-
-.phoneNav span {
-  width: 8px;
+.phoneBar {
   height: 3px;
+  background: rgba(184, 134, 11, 0.15);
   border-radius: 1.5px;
-  background: rgba(0, 0, 0, 0.12);
+  width: 75%;
 }
 
-/* ── Browser / Landing ── */
-.browser {
-  width: 100%;
-  height: 100%;
+.phoneCardA {
+  height: 14px;
+  background: rgba(184, 134, 11, 0.08);
+  border-radius: 3px;
+}
+
+/* ── 01: Browser landing ── */
+.browserMini {
+  width: 100px;
+  height: 68px;
   background: #fff;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  animation: gentleFloat 3s ease-in-out infinite;
 }
 
-.browserBar {
+.bBar {
+  height: 12px;
+  background: #f5f0e8;
   display: flex;
-  gap: 3px;
-  padding: 5px 6px;
-  background: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  align-items: center;
+  padding: 0 5px;
+  gap: 2px;
 }
 
-.browserBar span {
-  width: 5px;
-  height: 5px;
+.bBar span {
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.15);
 }
 
-.browserContent {
-  flex: 1;
-  padding: 6px;
+.bBody {
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-
-.landingHero {
-  height: 24px;
-  background: linear-gradient(135deg, rgba(184, 134, 11, 0.15), rgba(184, 134, 11, 0.05));
-  border-radius: 4px;
-}
-
-.landingCols {
-  display: flex;
-  gap: 3px;
-  flex: 1;
-}
-
-.landingCols div {
-  flex: 1;
-  background: rgba(0, 0, 0, 0.04);
-  border-radius: 3px;
-}
-
-.landingCta {
-  height: 8px;
-  width: 40%;
-  background: var(--text);
-  border-radius: 4px;
-  margin: 0 auto;
-  opacity: 0.2;
-}
-
-/* ── Brand from zero ── */
-.brandZero {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 4px;
 }
 
-.bzCard {
-  background: rgba(255, 255, 255, 0.7);
+.bHero {
+  height: 16px;
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.12), rgba(184, 134, 11, 0.04));
+  border-radius: 3px;
+}
+
+.bCols {
+  display: flex;
+  gap: 2px;
+}
+
+.bCols div {
+  flex: 1;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+
+.bCta {
+  width: 30px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 3px;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+
+/* ── 01: Brand zero ── */
+.zeroStack {
+  display: flex;
+  gap: 4px;
+  animation: gentleFloat 3.5s ease-in-out infinite;
+}
+
+.zeroItem {
+  width: 40px;
+  height: 48px;
+  background: #fff;
   border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6px;
 }
 
-.bzCard:first-child {
-  grid-column: 1 / -1;
-}
-
-.bzLogo {
-  width: 24px;
-  height: 24px;
+.zeroDot {
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--text);
-  opacity: 0.15;
+  background: linear-gradient(135deg, var(--gold), var(--gold-surface2));
 }
 
-.bzLines {
+.zeroLines {
   display: flex;
   flex-direction: column;
   gap: 3px;
   width: 100%;
 }
 
-.bzLines div {
-  height: 3px;
-  border-radius: 1.5px;
-  background: var(--text);
-  opacity: 0.1;
+.zeroLines div {
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.bzLines div:nth-child(2) { width: 75%; }
-.bzLines div:nth-child(3) { width: 50%; }
+.zeroLines div:last-child { width: 60%; }
 
-.bzPalette {
-  display: flex;
-  gap: 4px;
+.zeroFloat {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: var(--gold);
+  opacity: 0.3;
+  animation: gentleFloat 4s ease-in-out infinite reverse;
 }
 
-.bzPalette span {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-}
-
-.bzPalette span:first-child { background: var(--text); }
-.bzPalette span:last-child { background: #b8860b; }
-
-/* ── Chat / WhatsApp ── */
-.chat {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
+/* ── 02: Chat ── */
+.chatBox {
+  width: 80px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  justify-content: flex-end;
+  animation: gentleFloat 3s ease-in-out infinite;
 }
 
-.chatBubble {
-  height: 12px;
-  border-radius: 8px;
-  max-width: 80%;
-}
-
-.chatIn {
-  background: rgba(37, 99, 235, 0.12);
-  align-self: flex-start;
-  width: 65%;
-}
-
-.chatOut {
-  background: #dcf8c6;
-  align-self: flex-end;
-  width: 55%;
-}
-
-.chatShort {
-  width: 40%;
-}
-
-.chatInput {
+.bubble {
   height: 10px;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  margin-top: 2px;
+  border-radius: 8px;
 }
 
-/* ── Workflow ── */
-.flow {
+.bubbleIn {
+  background: rgba(37, 99, 235, 0.12);
+  width: 80%;
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+
+.bubbleOut {
+  background: #dcf8c6;
+  width: 65%;
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+
+.bubbleShort {
+  width: 50%;
+  animation: bubbleAppear 2s ease-in-out infinite;
+}
+
+@keyframes bubbleAppear {
+  0%, 30% { opacity: 0; transform: translateY(4px); }
+  50%, 80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(4px); }
+}
+
+/* ── 02: Workflow ── */
+.flowRow {
   display: flex;
   align-items: center;
-  gap: 4px;
-  width: 100%;
-  justify-content: center;
+  gap: 3px;
 }
 
-.flowNode {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  background: rgba(37, 99, 235, 0.15);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+.flowBox {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+  border: 1.5px solid rgba(37, 99, 235, 0.2);
 }
 
-.flowArrow {
-  width: 12px;
-  height: 2px;
-  background: rgba(37, 99, 235, 0.25);
-  position: relative;
+.flowBox:nth-child(1) { animation: flowPulse 2s ease-in-out infinite; }
+.flowBox:nth-child(3) { animation: flowPulse 2s ease-in-out 0.4s infinite; }
+.flowBox:nth-child(5) { animation: flowPulse 2s ease-in-out 0.8s infinite; }
+
+@keyframes flowPulse {
+  0%, 100% { background: #fff; }
+  50% { background: rgba(37, 99, 235, 0.1); }
 }
 
-.flowArrow::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: -3px;
-  width: 0;
-  height: 0;
-  border-left: 4px solid rgba(37, 99, 235, 0.25);
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
+.flowLine {
+  width: 10px;
+  height: 1.5px;
+  background: rgba(37, 99, 235, 0.3);
 }
 
-/* ── Terminal / Pentest ── */
-.terminal {
-  width: 100%;
-  height: 100%;
+/* ── 03: Terminal ── */
+.termWin {
+  width: 96px;
+  height: 64px;
   background: #1a1a1a;
   border-radius: 6px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  animation: gentleFloat 3.5s ease-in-out infinite;
 }
 
-.termBar {
-  display: flex;
-  gap: 3px;
-  padding: 5px 6px;
+.termTop {
+  height: 10px;
   background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  gap: 2px;
 }
 
-.termBar span {
-  width: 5px;
-  height: 5px;
+.termTop span {
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
 }
 
-.termBar span:nth-child(1) { background: #ff5f57; }
-.termBar span:nth-child(2) { background: #ffbd2e; }
-.termBar span:nth-child(3) { background: #28c840; }
+.termTop span:nth-child(1) { background: #ff5f57; }
+.termTop span:nth-child(2) { background: #ffbd2e; }
+.termTop span:nth-child(3) { background: #28c840; }
 
-.termLines {
-  padding: 6px;
+.termBody {
+  padding: 5px 6px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
-.termLine {
-  height: 3px;
-  border-radius: 1.5px;
-  background: rgba(255, 255, 255, 0.15);
+.tLine {
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.12);
   width: 70%;
 }
 
-.termLine:nth-child(3) { width: 55%; }
+.tLine:nth-child(3) { width: 55%; }
 
-.termGreen {
-  background: rgba(40, 200, 64, 0.5);
-  width: 85%;
+.tGreen { background: rgba(40, 200, 64, 0.5); width: 80%; }
+.tRed { background: rgba(255, 95, 87, 0.45); width: 60%; }
+
+.tCursor {
+  width: 4px;
+  height: 8px;
+  background: rgba(40, 200, 64, 0.7);
+  animation: blink 1s steps(2) infinite;
 }
 
-.termRed {
-  background: rgba(255, 95, 87, 0.5);
-  width: 60%;
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-/* ── Infrastructure ── */
-.infra {
-  width: 100%;
-  height: 100%;
+/* ── 03: Infrastructure ── */
+.infraGroup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 6px;
+  animation: gentleFloat 3s ease-in-out infinite;
 }
 
-.infraShield {
-  color: #16a34a;
-  opacity: 0.6;
+.shield {
+  color: var(--green);
+  opacity: 0.7;
 }
 
 .infraNodes {
   display: flex;
-  gap: 6px;
+  gap: 4px;
 }
 
 .infraNodes span {
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background: rgba(22, 163, 74, 0.15);
-  border: 1px solid rgba(22, 163, 74, 0.2);
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(22, 163, 74, 0.15);
+  border: 1px solid rgba(22, 163, 74, 0.15);
 }
 
-/* ── Dashboard ── */
-.dash {
-  width: 100%;
-  height: 100%;
+/* ── 04: Dashboard ── */
+.dashWin {
+  width: 100px;
+  height: 64px;
   background: #fff;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   display: flex;
   overflow: hidden;
+  animation: gentleFloat 3s ease-in-out infinite;
 }
 
-.dashSidebar {
-  width: 20px;
+.dashSide {
+  width: 18px;
   background: rgba(0, 0, 0, 0.03);
   border-right: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 6px 3px;
+  padding: 5px 3px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.dashSidebar div {
-  height: 3px;
-  border-radius: 1.5px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.dashSidebar div:first-child {
-  background: rgba(147, 51, 234, 0.3);
-}
-
-.dashMain {
-  flex: 1;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.dashMetrics {
-  display: flex;
   gap: 3px;
 }
 
-.dashMetrics span {
-  flex: 1;
-  height: 14px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.04);
+.dashSide div {
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(0, 0, 0, 0.08);
 }
 
-.dashChart {
-  flex: 1;
-  border-radius: 4px;
-  background: linear-gradient(to top, rgba(147, 51, 234, 0.1), transparent);
-  border-bottom: 2px solid rgba(147, 51, 234, 0.25);
-}
+.dashSide div:first-child { background: rgba(147, 51, 234, 0.35); }
 
-/* ── SaaS ── */
-.saas {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+.dashBody {
+  flex: 1;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  gap: 4px;
 }
 
-.saasNav {
+.dashKpis {
+  display: flex;
+  gap: 2px;
+}
+
+.dashKpis span {
+  flex: 1;
+  height: 12px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.dashGraph {
+  flex: 1;
+  border-radius: 3px;
+  background: linear-gradient(to top, rgba(147, 51, 234, 0.1), transparent);
+  border-bottom: 1.5px solid rgba(147, 51, 234, 0.3);
+  position: relative;
+}
+
+/* ── 04: SaaS ── */
+.saasWin {
+  width: 96px;
+  height: 60px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: gentleFloat 3.5s ease-in-out infinite;
+}
+
+.saasTop {
   height: 10px;
   background: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.saasContent {
-  flex: 1;
-  padding: 6px;
-}
-
-.saasTable {
+.saasRows {
+  padding: 4px 5px;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-.saasTable div {
+.saasRow {
   height: 8px;
   border-radius: 2px;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.saasTable div:first-child {
+.saasRow:first-child {
   background: rgba(147, 51, 234, 0.08);
+}
+
+/* ── Shared animation ── */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }

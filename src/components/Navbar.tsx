@@ -22,6 +22,7 @@ export default function Navbar() {
         <a href={`/${locale}`} className={styles.logo} aria-label="Forma Studio">Forma</a>
         <div className={styles.links}>
           <a href="#servicios">{dict.nav.services}</a>
+          <a href="#nosotros">{dict.nav.about}</a>
           <a href="#proceso">{dict.nav.process}</a>
           <a href="#contacto">{dict.nav.contact}</a>
         </div>
@@ -53,6 +54,7 @@ export default function Navbar() {
       </nav>
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`} role="dialog" aria-modal="true">
         <a href="#servicios" onClick={() => setMenuOpen(false)}>{dict.nav.services}</a>
+        <a href="#nosotros" onClick={() => setMenuOpen(false)}>{dict.nav.about}</a>
         <a href="#proceso" onClick={() => setMenuOpen(false)}>{dict.nav.process}</a>
         <a href="#contacto" onClick={() => setMenuOpen(false)}>{dict.nav.contact}</a>
         <div className={styles.mobileLang}>

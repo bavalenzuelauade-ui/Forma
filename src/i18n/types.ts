@@ -5,6 +5,7 @@ export interface Dictionary {
   };
   nav: {
     services: string;
+    about: string;
     process: string;
     contact: string;
     cta: string;
@@ -18,6 +19,19 @@ export interface Dictionary {
     subtitle: string;
     btnPrimary: string;
     btnSecondary: string;
+  };
+  about: {
+    titlePre: string;
+    titleEm: string;
+    desc: string;
+    mission: string;
+    missionText: string;
+    vision: string;
+    visionText: string;
+    team: string;
+    teamText: string;
+    aiLabel: string;
+    aiText: string;
   };
   specializations: {
     titlePre: string;

@@ -7,6 +7,7 @@ const it: Dictionary = {
   },
   nav: {
     services: 'Servizi',
+    about: 'Chi siamo',
     process: 'Processo',
     contact: 'Contatto',
     cta: 'Parliamo',
@@ -20,6 +21,19 @@ const it: Dictionary = {
     subtitle: 'Strategia, branding e tecnologia per startup che vogliono distinguersi in LATAM.',
     btnPrimary: 'Inizia un progetto',
     btnSecondary: 'Vedi i lavori',
+  },
+  about: {
+    titlePre: 'Chi ',
+    titleEm: 'siamo',
+    desc: 'Un team giovane con una missione chiara: rendere il branding e la tecnologia di qualita accessibili a tutti.',
+    mission: 'Missione',
+    missionText: 'Creare soluzioni digitali di alta qualita che guidino la crescita dei nostri clienti. Ogni progetto e un\'opportunita per generare un impatto reale, indipendentemente dalla dimensione del business.',
+    vision: 'Visione',
+    visionText: 'Diventare lo studio digitale di riferimento in LATAM per startup e PMI che vogliono competere con la propria identita, tecnologia solida e strategia chiara.',
+    team: 'Il team',
+    teamText: 'Siamo un gruppo di studenti di amministrazione aziendale e cybersicurezza che ha deciso di costruire qualcosa di proprio. Ci muove la qualita, le relazioni a lungo termine e la crescita reciproca con ogni cliente.',
+    aiLabel: 'Potenziati dall\'IA',
+    aiText: 'Integriamo l\'intelligenza artificiale in ogni fase del processo — dal design e la strategia all\'automazione e lo sviluppo. Non sostituisce il giudizio umano, lo amplifica.',
   },
   specializations: {
     titlePre: 'Cosa ',

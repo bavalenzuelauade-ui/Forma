@@ -7,6 +7,7 @@ const en: Dictionary = {
   },
   nav: {
     services: 'Services',
+    about: 'About',
     process: 'Process',
     contact: 'Contact',
     cta: "Let's talk",
@@ -20,6 +21,19 @@ const en: Dictionary = {
     subtitle: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
     btnPrimary: 'Start a project',
     btnSecondary: 'See our work',
+  },
+  about: {
+    titlePre: 'Who we ',
+    titleEm: 'are',
+    desc: 'A young team with a clear mission: making quality branding and technology accessible to everyone.',
+    mission: 'Mission',
+    missionText: 'To create high-quality digital solutions that drive our clients\' growth. Every project is a chance to make a real impact, no matter the size of the business.',
+    vision: 'Vision',
+    visionText: 'To become the go-to digital studio in LATAM for startups and SMBs looking to compete with their own identity, solid technology, and clear strategy.',
+    team: 'The team',
+    teamText: 'We are a group of business administration and cybersecurity students who decided to build something of our own. We are driven by quality, long-term relationships, and mutual growth with every client.',
+    aiLabel: 'Powered by AI',
+    aiText: 'We integrate artificial intelligence at every stage of the process — from design and strategy to automation and development. It doesn\'t replace human judgment, it amplifies it.',
   },
   specializations: {
     titlePre: 'What we ',
