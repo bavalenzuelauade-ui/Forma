@@ -49,6 +49,13 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 32px;
+    margin: 0 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 60px 24px;
@@ -58,9 +65,25 @@
 
   .desc {
     font-size: 14px;
+    max-width: 100%;
   }
 
   .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .section {
+    padding: 48px 20px;
+    margin: 0 8px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 13px;
   }
 }

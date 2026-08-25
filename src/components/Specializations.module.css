@@ -116,6 +116,31 @@
 .purple .stepTag { background: var(--purple-bg); color: var(--purple-text); }
 .purple .stepVisual { background: linear-gradient(145deg, var(--purple-surface), var(--purple-surface2)); }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .section {
+    padding: 20px 24px 40px;
+  }
+
+  .step {
+    gap: 24px;
+    padding: 36px 0;
+  }
+
+  .stepVisual {
+    height: 240px;
+  }
+
+  .stepNum {
+    font-size: 56px;
+  }
+
+  .stepTitle {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .section {
     padding: 20px 20px 40px;
@@ -155,5 +180,29 @@
 
   .stepDesc {
     max-width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .section {
+    padding: 16px 16px 32px;
+  }
+
+  .stepVisual {
+    height: 180px;
+  }
+
+  .stepNum {
+    font-size: 40px;
+  }
+
+  .stepTitle {
+    font-size: 20px;
+  }
+
+  .stepTag {
+    font-size: 10px;
+    padding: 4px 10px;
   }
 }
