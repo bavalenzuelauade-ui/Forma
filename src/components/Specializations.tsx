@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 import { useLocale } from '@/i18n/context';
 import styles from './Specializations.module.css';
@@ -33,8 +33,16 @@ function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
   stepIndex: number;
 }) {
   const ref = useRef(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
   const inView = useInView(ref, { once: false, amount: 0.1 });
   const colorClass = styles[color as keyof typeof styles] || '';
+
+  useEffect(() => {
+    if (expanded && panelRef.current) {
+      setHeight(panelRef.current.scrollHeight);
+    }
+  }, [expanded]);
 
   return (
     <ScrollReveal
@@ -57,11 +65,18 @@ function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
           <StepVisualContent color={color} inView={inView} />
         </div>
       </div>
-      {expanded && (
-        <div className={styles.expandPanel}>
+      <div
+        className={`${styles.expandWrapper} ${expanded ? styles.expandWrapperOpen : ''}`}
+        style={{ maxHeight: expanded ? height : 0 }}
+      >
+        <div className={styles.expandPanel} ref={panelRef}>
           <div className={styles.expandContent}>
             {stepData.details.map((detail, di) => (
-              <div key={detail.title} className={styles.subItem}>
+              <div
+                key={detail.title}
+                className={`${styles.subItem} ${expanded ? styles.subItemVisible : ''}`}
+                style={{ transitionDelay: expanded ? `${di * 80 + 150}ms` : '0ms' }}
+              >
                 <div className={styles.subMockup}>
                   <SubMockup mockupKey={DETAIL_KEYS[stepIndex]?.[di] || ''} />
                 </div>
@@ -73,7 +88,7 @@ function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
             ))}
           </div>
         </div>
-      )}
+      </div>
     </ScrollReveal>
   );
 }
