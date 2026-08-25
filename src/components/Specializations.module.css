@@ -165,24 +165,27 @@
 
 .subItem {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 28px 32px;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   transition: background 0.2s;
 }
 
 .subItem:hover {
-  background: var(--bg);
+  background: rgba(0, 0, 0, 0.015);
 }
 
-.subDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.subMockup {
+  width: 120px;
+  min-height: 100px;
   flex-shrink: 0;
-  margin-top: 5px;
+  padding: 10px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subText {
@@ -190,6 +193,8 @@
   flex-direction: column;
   gap: 6px;
   min-width: 0;
+  padding: 20px 24px;
+  justify-content: center;
 }
 
 .subTitle {
@@ -209,19 +214,19 @@
 /* Color themes */
 .gold .stepNum { color: var(--gold); }
 .gold .stepVisual { background: linear-gradient(145deg, var(--gold-surface), var(--gold-surface2)); }
-.gold .subDot { background: var(--gold); }
+.gold .subMockup { background: rgba(184, 134, 11, 0.06); }
 
 .blue .stepNum { color: var(--blue); }
 .blue .stepVisual { background: linear-gradient(145deg, var(--blue-surface), var(--blue-surface2)); }
-.blue .subDot { background: var(--blue); }
+.blue .subMockup { background: rgba(37, 99, 235, 0.06); }
 
 .green .stepNum { color: var(--green); }
 .green .stepVisual { background: linear-gradient(145deg, var(--green-surface), var(--green-surface2)); }
-.green .subDot { background: var(--green); }
+.green .subMockup { background: rgba(22, 163, 74, 0.06); }
 
 .purple .stepNum { color: var(--purple); }
 .purple .stepVisual { background: linear-gradient(145deg, var(--purple-surface), var(--purple-surface2)); }
-.purple .subDot { background: var(--purple); }
+.purple .subMockup { background: rgba(147, 51, 234, 0.06); }
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -302,11 +307,19 @@
 
   .subItem {
     border-right: none;
-    padding: 20px 24px;
   }
 
   .subItem:last-child {
     border-bottom: none;
+  }
+
+  .subMockup {
+    width: 80px;
+    min-height: 80px;
+  }
+
+  .subText {
+    padding: 16px 20px;
   }
 }
 
@@ -328,8 +341,14 @@
     font-size: 20px;
   }
 
-  .subItem {
-    padding: 16px 20px;
+  .subMockup {
+    width: 70px;
+    min-height: 70px;
+    padding: 8px;
+  }
+
+  .subText {
+    padding: 14px 16px;
   }
 
   .subTitle {

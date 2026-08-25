@@ -1,0 +1,503 @@
+.mockup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* ── Brand identity sheet ── */
+.brandSheet {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brandLogo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--text);
+}
+
+.brandColors {
+  display: flex;
+  gap: 4px;
+}
+
+.brandColors span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.brandColors span:nth-child(1) { background: #1a1a1a; }
+.brandColors span:nth-child(2) { background: #b8860b; }
+.brandColors span:nth-child(3) { background: #e8dcc8; }
+.brandColors span:nth-child(4) { background: #f4f2ee; }
+
+.brandType {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.brandTypeL {
+  height: 6px;
+  width: 70%;
+  background: var(--text);
+  border-radius: 3px;
+  opacity: 0.15;
+}
+
+.brandTypeS {
+  height: 4px;
+  width: 45%;
+  background: var(--text);
+  border-radius: 2px;
+  opacity: 0.1;
+}
+
+/* ── Phone / App ── */
+.phone {
+  width: 64px;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.phoneNotch {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 2px auto 4px;
+}
+
+.phoneHeader {
+  height: 8px;
+  background: var(--text);
+  border-radius: 3px;
+  opacity: 0.08;
+  margin-bottom: 4px;
+}
+
+.phoneCards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.phoneCard {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.12), rgba(184, 134, 11, 0.06));
+  border-radius: 4px;
+}
+
+.phoneNav {
+  display: flex;
+  justify-content: space-around;
+  padding: 3px 0 1px;
+}
+
+.phoneNav span {
+  width: 8px;
+  height: 3px;
+  border-radius: 1.5px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* ── Browser / Landing ── */
+.browser {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.browserBar {
+  display: flex;
+  gap: 3px;
+  padding: 5px 6px;
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.browserBar span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.browserContent {
+  flex: 1;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.landingHero {
+  height: 24px;
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.15), rgba(184, 134, 11, 0.05));
+  border-radius: 4px;
+}
+
+.landingCols {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.landingCols div {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+.landingCta {
+  height: 8px;
+  width: 40%;
+  background: var(--text);
+  border-radius: 4px;
+  margin: 0 auto;
+  opacity: 0.2;
+}
+
+/* ── Brand from zero ── */
+.brandZero {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+
+.bzCard {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.bzCard:first-child {
+  grid-column: 1 / -1;
+}
+
+.bzLogo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--text);
+  opacity: 0.15;
+}
+
+.bzLines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+}
+
+.bzLines div {
+  height: 3px;
+  border-radius: 1.5px;
+  background: var(--text);
+  opacity: 0.1;
+}
+
+.bzLines div:nth-child(2) { width: 75%; }
+.bzLines div:nth-child(3) { width: 50%; }
+
+.bzPalette {
+  display: flex;
+  gap: 4px;
+}
+
+.bzPalette span {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.bzPalette span:first-child { background: var(--text); }
+.bzPalette span:last-child { background: #b8860b; }
+
+/* ── Chat / WhatsApp ── */
+.chat {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.chatBubble {
+  height: 12px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.chatIn {
+  background: rgba(37, 99, 235, 0.12);
+  align-self: flex-start;
+  width: 65%;
+}
+
+.chatOut {
+  background: #dcf8c6;
+  align-self: flex-end;
+  width: 55%;
+}
+
+.chatShort {
+  width: 40%;
+}
+
+.chatInput {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 2px;
+}
+
+/* ── Workflow ── */
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  justify-content: center;
+}
+
+.flowNode {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.flowArrow {
+  width: 12px;
+  height: 2px;
+  background: rgba(37, 99, 235, 0.25);
+  position: relative;
+}
+
+.flowArrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid rgba(37, 99, 235, 0.25);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+/* ── Terminal / Pentest ── */
+.terminal {
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.termBar {
+  display: flex;
+  gap: 3px;
+  padding: 5px 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.termBar span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.termBar span:nth-child(1) { background: #ff5f57; }
+.termBar span:nth-child(2) { background: #ffbd2e; }
+.termBar span:nth-child(3) { background: #28c840; }
+
+.termLines {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.termLine {
+  height: 3px;
+  border-radius: 1.5px;
+  background: rgba(255, 255, 255, 0.15);
+  width: 70%;
+}
+
+.termLine:nth-child(3) { width: 55%; }
+
+.termGreen {
+  background: rgba(40, 200, 64, 0.5);
+  width: 85%;
+}
+
+.termRed {
+  background: rgba(255, 95, 87, 0.5);
+  width: 60%;
+}
+
+/* ── Infrastructure ── */
+.infra {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.infraShield {
+  color: #16a34a;
+  opacity: 0.6;
+}
+
+.infraNodes {
+  display: flex;
+  gap: 6px;
+}
+
+.infraNodes span {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: rgba(22, 163, 74, 0.15);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+/* ── Dashboard ── */
+.dash {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  overflow: hidden;
+}
+
+.dashSidebar {
+  width: 20px;
+  background: rgba(0, 0, 0, 0.03);
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 6px 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashSidebar div {
+  height: 3px;
+  border-radius: 1.5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dashSidebar div:first-child {
+  background: rgba(147, 51, 234, 0.3);
+}
+
+.dashMain {
+  flex: 1;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashMetrics {
+  display: flex;
+  gap: 3px;
+}
+
+.dashMetrics span {
+  flex: 1;
+  height: 14px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.dashChart {
+  flex: 1;
+  border-radius: 4px;
+  background: linear-gradient(to top, rgba(147, 51, 234, 0.1), transparent);
+  border-bottom: 2px solid rgba(147, 51, 234, 0.25);
+}
+
+/* ── SaaS ── */
+.saas {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.saasNav {
+  height: 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.saasContent {
+  flex: 1;
+  padding: 6px;
+}
+
+.saasTable {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.saasTable div {
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.saasTable div:first-child {
+  background: rgba(147, 51, 234, 0.08);
+}

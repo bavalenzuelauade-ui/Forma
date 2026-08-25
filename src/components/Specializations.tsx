@@ -9,6 +9,7 @@ import BrandingVisual from './visuals/BrandingVisual';
 import AutomationVisual from './visuals/AutomationVisual';
 import CyberVisual from './visuals/CyberVisual';
 import ProductVisual from './visuals/ProductVisual';
+import SubMockup, { DETAIL_KEYS } from './visuals/SubMockups';
 
 const COLORS = ['gold', 'blue', 'green', 'purple'];
 const REVERSES = [false, true, false, true];
@@ -23,12 +24,13 @@ function StepVisualContent({ color, inView }: { color: string; inView: boolean }
   }
 }
 
-function Step({ stepData, color, reverse, expanded, onToggle }: {
+function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
   stepData: { num: string; title: string; desc: string; tags: string[]; details: { title: string; desc: string }[] };
   color: string;
   reverse: boolean;
   expanded: boolean;
   onToggle: () => void;
+  stepIndex: number;
 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.1 });
@@ -58,9 +60,11 @@ function Step({ stepData, color, reverse, expanded, onToggle }: {
       {expanded && (
         <div className={styles.expandPanel}>
           <div className={styles.expandContent}>
-            {stepData.details.map((detail) => (
+            {stepData.details.map((detail, di) => (
               <div key={detail.title} className={styles.subItem}>
-                <span className={styles.subDot} />
+                <div className={styles.subMockup}>
+                  <SubMockup mockupKey={DETAIL_KEYS[stepIndex]?.[di] || ''} />
+                </div>
                 <div className={styles.subText}>
                   <span className={styles.subTitle}>{detail.title}</span>
                   <span className={styles.subDesc}>{detail.desc}</span>
@@ -99,6 +103,7 @@ export default function Specializations() {
           reverse={REVERSES[i]}
           expanded={openIndex === i}
           onToggle={() => handleToggle(i)}
+          stepIndex={i}
         />
       ))}
     </section>
