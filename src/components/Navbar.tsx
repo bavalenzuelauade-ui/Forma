@@ -19,7 +19,12 @@ export default function Navbar() {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} role="navigation" aria-label={dict.nav.menu}>
-        <a href={`/${locale}`} className={styles.logo} aria-label="Forma Studio">Forma</a>
+        <a href={`/${locale}`} className={styles.logo} aria-label="Forma Studio">
+          Forma
+          <svg className={styles.mountain} viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polyline points="0,16 6,6 10,11 16,2 22,11 26,6 32,16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </a>
         <div className={styles.links}>
           <a href="#servicios">{dict.nav.services}</a>
           <a href="#nosotros">{dict.nav.about}</a>
