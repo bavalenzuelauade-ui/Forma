@@ -9,7 +9,7 @@ const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/bavalenzuelauade@gmail.com';
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
 export default function Diagnostic() {
-  const { dict } = useLocale();
+  const { dict, locale } = useLocale();
   const { diagnostic: d } = dict;
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -36,6 +36,9 @@ export default function Diagnostic() {
     setError('');
 
     const formData = new FormData(e.currentTarget);
+
+    if (formData.get('_gotcha')) return;
+
     formData.append('_subject', 'Diagnostico gratuito — Forma Studio');
     formData.append('_template', 'table');
 
@@ -79,11 +82,13 @@ export default function Diagnostic() {
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
               {error && <p className={styles.errorMsg}>{error}</p>}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <input
                 type="text"
                 name="name"
                 placeholder={d.formName}
                 required
+                maxLength={100}
                 className={styles.input}
                 autoComplete="name"
               />
@@ -92,6 +97,7 @@ export default function Diagnostic() {
                 name="email"
                 placeholder={d.formEmail}
                 required
+                maxLength={254}
                 className={styles.input}
                 autoComplete="email"
               />
@@ -99,6 +105,7 @@ export default function Diagnostic() {
                 name="message"
                 placeholder={d.formBusiness}
                 required
+                maxLength={2000}
                 rows={3}
                 className={styles.textarea}
               />
@@ -133,6 +140,15 @@ export default function Diagnostic() {
                   </>
                 )}
               </div>
+              <label className={styles.consent}>
+                <input type="checkbox" required />
+                <span>
+                  {dict.legal.consent}{' '}
+                  <a href={`/${locale}/privacidad`} target="_blank" rel="noopener noreferrer">
+                    {dict.legal.privacyLink}
+                  </a>
+                </span>
+              </label>
               <button type="submit" className={styles.btn} disabled={sending}>
                 {sending ? '...' : d.formSend}
               </button>

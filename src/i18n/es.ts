@@ -133,7 +133,36 @@ const es: Dictionary = {
   },
   footer: {
     name: 'Forma Studio',
-    location: 'Argentina',
+    location: 'Bariloche, Argentina',
+    privacy: 'Politica de privacidad',
+    terms: 'Terminos y condiciones',
+    rights: 'Todos los derechos reservados.',
+  },
+  legal: {
+    consent: 'Acepto la',
+    privacyLink: 'politica de privacidad',
+  },
+  privacy: {
+    title: 'Politica de Privacidad',
+    intro: 'En Forma Studio nos comprometemos a proteger tus datos personales conforme a la Ley 25.326 de Proteccion de Datos Personales de la Republica Argentina.',
+    sections: [
+      { heading: 'Datos que recopilamos', text: 'Recopilamos unicamente los datos que nos proporcionas voluntariamente a traves de nuestros formularios: nombre, email, descripcion de tu proyecto y archivos que decidas adjuntar (logos o material de marca).' },
+      { heading: 'Finalidad del tratamiento', text: 'Usamos tus datos exclusivamente para responder tu consulta, elaborar diagnosticos o presupuestos, y comunicarnos contigo sobre el servicio solicitado. No vendemos, cedemos ni compartimos tus datos con terceros, salvo el servicio de envio de formularios (FormSubmit) necesario para recibir tu mensaje.' },
+      { heading: 'Almacenamiento y seguridad', text: 'Tus datos se transmiten de forma cifrada (HTTPS) y se almacenan el tiempo necesario para gestionar tu consulta. No almacenamos informacion de pago ni datos sensibles.' },
+      { heading: 'Tus derechos', text: 'Podes acceder, rectificar, actualizar o solicitar la supresion de tus datos en cualquier momento escribiendonos a contacto@formaarg.com. La Agencia de Acceso a la Informacion Publica (AAIP) es el organo de control de la Ley 25.326.' },
+      { heading: 'Cookies', text: 'Este sitio no utiliza cookies de seguimiento ni analiticas. No recopilamos datos de navegacion.' },
+    ],
+  },
+  terms: {
+    title: 'Terminos y Condiciones',
+    intro: 'Al utilizar el sitio web de Forma Studio aceptas los siguientes terminos.',
+    sections: [
+      { heading: 'Servicios', text: 'Forma Studio ofrece servicios de branding, desarrollo web, automatizacion, ciberseguridad y producto digital. Los presupuestos y alcances se definen individualmente para cada proyecto.' },
+      { heading: 'Propiedad intelectual', text: 'Todo el contenido del sitio (disenos, textos, codigo, marcas) es propiedad de Forma Studio salvo indicacion contraria. Los entregables de cada proyecto pasan a ser propiedad del cliente una vez completado el pago.' },
+      { heading: 'Limitacion de responsabilidad', text: 'Forma Studio no garantiza resultados especificos de negocio derivados de los servicios prestados. Los diagnosticos gratuitos son orientativos y no constituyen un compromiso contractual.' },
+      { heading: 'Formularios de contacto', text: 'La informacion enviada a traves de los formularios se utiliza unicamente para responder consultas. No constituye una relacion contractual hasta que ambas partes acuerden formalmente un proyecto.' },
+      { heading: 'Modificaciones', text: 'Nos reservamos el derecho de modificar estos terminos. La version vigente estara siempre disponible en esta pagina.' },
+    ],
   },
 };
 

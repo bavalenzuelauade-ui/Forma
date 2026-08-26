@@ -9,7 +9,7 @@ const WA_NUMBER = '5492944713929';
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/bavalenzuelauade@gmail.com';
 
 export default function CTA() {
-  const { dict } = useLocale();
+  const { dict, locale } = useLocale();
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
@@ -23,6 +23,8 @@ export default function CTA() {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+
+    if (data.get('_gotcha')) return;
 
     try {
       const res = await fetch(FORMSUBMIT_URL, {
@@ -89,11 +91,13 @@ export default function CTA() {
               className={styles.form}
             >
               {error && <p className={styles.errorMsg}>Error al enviar. Intentalo de nuevo.</p>}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <input
                 type="text"
                 name="name"
                 placeholder={dict.cta.formName}
                 required
+                maxLength={100}
                 className={styles.input}
                 autoComplete="name"
               />
@@ -102,6 +106,7 @@ export default function CTA() {
                 name="email"
                 placeholder={dict.cta.formEmail}
                 required
+                maxLength={254}
                 className={styles.input}
                 autoComplete="email"
               />
@@ -109,9 +114,19 @@ export default function CTA() {
                 name="message"
                 placeholder={dict.cta.formMessage}
                 required
+                maxLength={2000}
                 rows={4}
                 className={styles.textarea}
               />
+              <label className={styles.consent}>
+                <input type="checkbox" required />
+                <span>
+                  {dict.legal.consent}{' '}
+                  <a href={`/${locale}/privacidad`} target="_blank" rel="noopener noreferrer">
+                    {dict.legal.privacyLink}
+                  </a>
+                </span>
+              </label>
               <button type="submit" className={styles.btn} disabled={sending}>
                 {sending ? '...' : dict.cta.formSend}
               </button>

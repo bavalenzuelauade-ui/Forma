@@ -133,7 +133,36 @@ const en: Dictionary = {
   },
   footer: {
     name: 'Forma Studio',
-    location: 'Argentina',
+    location: 'Bariloche, Argentina',
+    privacy: 'Privacy policy',
+    terms: 'Terms & conditions',
+    rights: 'All rights reserved.',
+  },
+  legal: {
+    consent: 'I accept the',
+    privacyLink: 'privacy policy',
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    intro: 'At Forma Studio we are committed to protecting your personal data in accordance with Argentina\'s Personal Data Protection Law 25.326.',
+    sections: [
+      { heading: 'Data we collect', text: 'We only collect data you voluntarily provide through our forms: name, email, project description, and any files you choose to attach (logos or brand materials).' },
+      { heading: 'Purpose', text: 'We use your data exclusively to respond to your inquiry, prepare diagnostics or quotes, and communicate with you about the requested service. We do not sell, transfer, or share your data with third parties, except for the form delivery service (FormSubmit) necessary to receive your message.' },
+      { heading: 'Storage and security', text: 'Your data is transmitted in encrypted form (HTTPS) and stored only for the time necessary to handle your inquiry. We do not store payment information or sensitive data.' },
+      { heading: 'Your rights', text: 'You may access, rectify, update, or request deletion of your data at any time by writing to contacto@formaarg.com. The Agency for Access to Public Information (AAIP) is the supervisory authority under Law 25.326.' },
+      { heading: 'Cookies', text: 'This site does not use tracking or analytics cookies. We do not collect browsing data.' },
+    ],
+  },
+  terms: {
+    title: 'Terms & Conditions',
+    intro: 'By using the Forma Studio website you accept the following terms.',
+    sections: [
+      { heading: 'Services', text: 'Forma Studio offers branding, web development, automation, cybersecurity, and digital product services. Quotes and scope are defined individually for each project.' },
+      { heading: 'Intellectual property', text: 'All website content (designs, text, code, trademarks) is the property of Forma Studio unless stated otherwise. Project deliverables become the client\'s property once payment is completed.' },
+      { heading: 'Limitation of liability', text: 'Forma Studio does not guarantee specific business results from the services provided. Free diagnostics are for guidance only and do not constitute a contractual commitment.' },
+      { heading: 'Contact forms', text: 'Information submitted through forms is used solely to respond to inquiries. It does not create a contractual relationship until both parties formally agree on a project.' },
+      { heading: 'Modifications', text: 'We reserve the right to modify these terms. The current version will always be available on this page.' },
+    ],
   },
 };
 

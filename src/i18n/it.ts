@@ -133,7 +133,36 @@ const it: Dictionary = {
   },
   footer: {
     name: 'Forma Studio',
-    location: 'Argentina',
+    location: 'Bariloche, Argentina',
+    privacy: 'Informativa sulla privacy',
+    terms: 'Termini e condizioni',
+    rights: 'Tutti i diritti riservati.',
+  },
+  legal: {
+    consent: 'Accetto la',
+    privacyLink: 'informativa sulla privacy',
+  },
+  privacy: {
+    title: 'Informativa sulla Privacy',
+    intro: 'Forma Studio si impegna a proteggere i tuoi dati personali in conformita alla Legge 25.326 sulla Protezione dei Dati Personali della Repubblica Argentina.',
+    sections: [
+      { heading: 'Dati che raccogliamo', text: 'Raccogliamo solo i dati che fornisci volontariamente tramite i nostri moduli: nome, email, descrizione del progetto e file che decidi di allegare (loghi o materiali del brand).' },
+      { heading: 'Finalita', text: 'Utilizziamo i tuoi dati esclusivamente per rispondere alla tua richiesta, elaborare diagnosi o preventivi e comunicare con te sul servizio richiesto. Non vendiamo, cediamo ne condividiamo i tuoi dati con terze parti, eccetto il servizio di invio moduli (FormSubmit) necessario per ricevere il tuo messaggio.' },
+      { heading: 'Archiviazione e sicurezza', text: 'I tuoi dati vengono trasmessi in forma criptata (HTTPS) e conservati solo per il tempo necessario a gestire la tua richiesta. Non archiviamo informazioni di pagamento ne dati sensibili.' },
+      { heading: 'I tuoi diritti', text: 'Puoi accedere, rettificare, aggiornare o richiedere la cancellazione dei tuoi dati in qualsiasi momento scrivendo a contacto@formaarg.com.' },
+      { heading: 'Cookie', text: 'Questo sito non utilizza cookie di tracciamento o analisi. Non raccogliamo dati di navigazione.' },
+    ],
+  },
+  terms: {
+    title: 'Termini e Condizioni',
+    intro: 'Utilizzando il sito web di Forma Studio accetti i seguenti termini.',
+    sections: [
+      { heading: 'Servizi', text: 'Forma Studio offre servizi di branding, sviluppo web, automazione, cybersicurezza e prodotto digitale. Preventivi e ambiti vengono definiti individualmente per ogni progetto.' },
+      { heading: 'Proprieta intellettuale', text: 'Tutti i contenuti del sito (design, testi, codice, marchi) sono proprieta di Forma Studio salvo diversa indicazione. I deliverable di ogni progetto diventano proprieta del cliente una volta completato il pagamento.' },
+      { heading: 'Limitazione di responsabilita', text: 'Forma Studio non garantisce risultati di business specifici derivanti dai servizi forniti. Le diagnosi gratuite sono indicative e non costituiscono un impegno contrattuale.' },
+      { heading: 'Moduli di contatto', text: 'Le informazioni inviate tramite i moduli vengono utilizzate esclusivamente per rispondere alle richieste. Non costituiscono un rapporto contrattuale fino a quando entrambe le parti non concordano formalmente un progetto.' },
+      { heading: 'Modifiche', text: 'Ci riserviamo il diritto di modificare questi termini. La versione attuale sara sempre disponibile su questa pagina.' },
+    ],
   },
 };
 

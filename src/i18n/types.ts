@@ -88,6 +88,23 @@ export interface Dictionary {
   footer: {
     name: string;
     location: string;
+    privacy: string;
+    terms: string;
+    rights: string;
+  };
+  legal: {
+    consent: string;
+    privacyLink: string;
+  };
+  privacy: {
+    title: string;
+    intro: string;
+    sections: { heading: string; text: string }[];
+  };
+  terms: {
+    title: string;
+    intro: string;
+    sections: { heading: string; text: string }[];
   };
 }
 
