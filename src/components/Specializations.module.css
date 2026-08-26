@@ -181,6 +181,10 @@
   background: rgba(0, 0, 0, 0.015);
 }
 
+.subItemSelected {
+  background: rgba(0, 0, 0, 0.025);
+}
+
 .subMockup {
   height: 120px;
   padding: 16px;
@@ -212,6 +216,59 @@
   font-weight: 400;
   color: var(--text3);
   line-height: 1.6;
+}
+
+.subTextRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.subTextRow > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.addBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.addBtn:hover {
+  border-color: var(--text);
+  color: var(--text);
+  transform: scale(1.1);
+}
+
+.addBtnActive {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.addBtnActive:hover {
+  opacity: 0.85;
+  color: var(--bg);
+}
+
+.headerAdapt {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-top: 8px;
 }
 
 /* Color themes */

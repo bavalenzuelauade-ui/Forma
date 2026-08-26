@@ -39,6 +39,7 @@ const es: Dictionary = {
     titlePre: 'Lo que ',
     titleEm: 'hacemos',
     desc: 'Cuatro especialidades con las que transformamos ideas en productos reales.',
+    adaptMsg: 'Elegi lo que necesitas — nos adaptamos a cada proyecto.',
     steps: [
       {
         num: '01',
@@ -83,6 +84,12 @@ const es: Dictionary = {
         ],
       },
     ],
+  },
+  cart: {
+    selected: 'seleccionados',
+    sendSelection: 'Enviar seleccion',
+    clearAll: 'Limpiar',
+    orTalk: 'o charlemos sin compromiso',
   },
   diagnostic: {
     label: 'Diagnostico gratuito',

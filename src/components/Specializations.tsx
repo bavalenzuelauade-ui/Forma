@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 import { useLocale } from '@/i18n/context';
+import { useCart } from './CartContext';
 import styles from './Specializations.module.css';
 import ScrollReveal from './ScrollReveal';
 import BrandingVisual from './visuals/BrandingVisual';
@@ -37,12 +38,22 @@ function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
   const [height, setHeight] = useState(0);
   const inView = useInView(ref, { once: false, amount: 0.1 });
   const colorClass = styles[color as keyof typeof styles] || '';
+  const cart = useCart();
 
   useEffect(() => {
     if (expanded && panelRef.current) {
       setHeight(panelRef.current.scrollHeight);
     }
   }, [expanded]);
+
+  function handleAddClick(e: React.MouseEvent, title: string) {
+    e.stopPropagation();
+    if (cart.has(title)) {
+      cart.remove(title);
+    } else {
+      cart.add(title);
+    }
+  }
 
   return (
     <ScrollReveal
@@ -71,21 +82,45 @@ function Step({ stepData, color, reverse, expanded, onToggle, stepIndex }: {
       >
         <div className={styles.expandPanel} ref={panelRef}>
           <div className={styles.expandContent}>
-            {stepData.details.map((detail, di) => (
-              <div
-                key={detail.title}
-                className={`${styles.subItem} ${expanded ? styles.subItemVisible : ''}`}
-                style={{ transitionDelay: expanded ? `${di * 80 + 150}ms` : '0ms' }}
-              >
-                <div className={styles.subMockup}>
-                  <SubMockup mockupKey={DETAIL_KEYS[stepIndex]?.[di] || ''} />
+            {stepData.details.map((detail, di) => {
+              const selected = cart.has(detail.title);
+              return (
+                <div
+                  key={detail.title}
+                  className={`${styles.subItem} ${expanded ? styles.subItemVisible : ''} ${selected ? styles.subItemSelected : ''}`}
+                  style={{ transitionDelay: expanded ? `${di * 80 + 150}ms` : '0ms' }}
+                >
+                  <div className={styles.subMockup}>
+                    <SubMockup mockupKey={DETAIL_KEYS[stepIndex]?.[di] || ''} />
+                  </div>
+                  <div className={styles.subText}>
+                    <div className={styles.subTextRow}>
+                      <div>
+                        <span className={styles.subTitle}>{detail.title}</span>
+                        <span className={styles.subDesc}>{detail.desc}</span>
+                      </div>
+                      <button
+                        className={`${styles.addBtn} ${selected ? styles.addBtnActive : ''}`}
+                        onClick={(e) => handleAddClick(e, detail.title)}
+                        aria-label={selected ? `Remove ${detail.title}` : `Add ${detail.title}`}
+                        type="button"
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          {selected ? (
+                            <polyline points="20 6 9 17 4 12" />
+                          ) : (
+                            <>
+                              <line x1="12" y1="5" x2="12" y2="19" />
+                              <line x1="5" y1="12" x2="19" y2="12" />
+                            </>
+                          )}
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles.subText}>
-                  <span className={styles.subTitle}>{detail.title}</span>
-                  <span className={styles.subDesc}>{detail.desc}</span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -104,7 +139,10 @@ export default function Specializations() {
   return (
     <section id="servicios" className={styles.section}>
       <ScrollReveal className={styles.header}>
-        <h2 className={styles.headerTitle}>{dict.specializations.titlePre}<em>{dict.specializations.titleEm}</em></h2>
+        <div>
+          <h2 className={styles.headerTitle}>{dict.specializations.titlePre}<em>{dict.specializations.titleEm}</em></h2>
+          <p className={styles.headerAdapt}>{dict.specializations.adaptMsg}</p>
+        </div>
         <p className={styles.headerDesc}>
           {dict.specializations.desc}
         </p>

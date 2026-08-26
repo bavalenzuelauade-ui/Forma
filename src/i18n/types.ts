@@ -37,6 +37,7 @@ export interface Dictionary {
     titlePre: string;
     titleEm: string;
     desc: string;
+    adaptMsg: string;
     steps: {
       num: string;
       title: string;
@@ -44,6 +45,12 @@ export interface Dictionary {
       tags: string[];
       details: { title: string; desc: string }[];
     }[];
+  };
+  cart: {
+    selected: string;
+    sendSelection: string;
+    clearAll: string;
+    orTalk: string;
   };
   diagnostic: {
     label: string;

@@ -39,6 +39,7 @@ const en: Dictionary = {
     titlePre: 'What we ',
     titleEm: 'do',
     desc: 'Four specialties that turn ideas into real products.',
+    adaptMsg: 'Pick what you need — we adapt to every project.',
     steps: [
       {
         num: '01',
@@ -83,6 +84,12 @@ const en: Dictionary = {
         ],
       },
     ],
+  },
+  cart: {
+    selected: 'selected',
+    sendSelection: 'Send selection',
+    clearAll: 'Clear',
+    orTalk: 'or let\'s chat with no commitment',
   },
   diagnostic: {
     label: 'Free diagnostic',
