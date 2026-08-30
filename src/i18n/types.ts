@@ -63,8 +63,13 @@ export interface Dictionary {
     formFile: string;
     formFileHint: string;
     formSend: string;
+    spotsLeft: string;
+    spotsMonth: string;
     formSuccess: string;
     formSuccessDesc: string;
+    successNext: string;
+    successSteps: string[];
+    successFollow: string;
   };
   process: {
     label: string;

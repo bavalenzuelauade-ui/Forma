@@ -7,6 +7,7 @@ import ScrollReveal from './ScrollReveal';
 
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/bavalenzuelauade@gmail.com';
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
+const SPOTS_TOTAL = 15;
 
 export default function Diagnostic() {
   const { dict, locale } = useLocale();
@@ -66,6 +67,10 @@ export default function Diagnostic() {
           <div className={styles.label}>{d.label}</div>
           <h2 className={styles.title}>{d.titlePre}<em>{d.titleEm}</em></h2>
           <p className={styles.desc}>{d.desc}</p>
+          <div className={styles.spotsBadge}>
+            <span className={styles.spotsDot} />
+            <span>{d.spotsLeft} <strong>{SPOTS_TOTAL}</strong> {d.spotsMonth}</span>
+          </div>
         </div>
 
         <div className={styles.formSide}>
@@ -78,6 +83,15 @@ export default function Diagnostic() {
               </div>
               <h3 className={styles.successTitle}>{d.formSuccess}</h3>
               <p className={styles.successDesc}>{d.formSuccessDesc}</p>
+              <div className={styles.successSteps}>
+                <div className={styles.successStepsLabel}>{d.successNext}</div>
+                <ol className={styles.stepsList}>
+                  {d.successSteps.map((step, i) => (
+                    <li key={i}>{step}</li>
+                  ))}
+                </ol>
+              </div>
+              <p className={styles.successFollow}>{d.successFollow}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
