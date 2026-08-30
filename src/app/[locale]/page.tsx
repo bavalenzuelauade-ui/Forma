@@ -13,6 +13,7 @@ import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import CartBar from '@/components/CartBar';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -71,6 +72,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
         </main>
         <Footer />
         <CartBar />
+        <WhatsAppButton />
       </CartProvider>
     </LocaleProvider>
   );
