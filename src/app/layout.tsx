@@ -18,11 +18,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_AR',
     alternateLocale: ['en_US', 'it_IT'],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Forma Studio — Estrategia, branding y tecnologia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Forma Studio — Digital Brand Studio',
     description: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
