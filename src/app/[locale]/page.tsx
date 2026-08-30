@@ -9,6 +9,7 @@ import Specializations from '@/components/Specializations';
 import AboutUs from '@/components/AboutUs';
 import Process from '@/components/Process';
 import Diagnostic from '@/components/Diagnostic';
+import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import CartBar from '@/components/CartBar';
@@ -65,6 +66,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
           <AboutUs />
           <Process />
           <Diagnostic />
+          <FAQ />
           <CTA />
         </main>
         <Footer />

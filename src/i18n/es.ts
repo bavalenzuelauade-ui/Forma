@@ -140,6 +140,37 @@ const es: Dictionary = {
     formSuccess: 'Mensaje enviado. Te respondemos pronto!',
     formOr: 'o',
   },
+  faq: {
+    titlePre: 'Preguntas ',
+    titleEm: 'frecuentes',
+    desc: 'Lo que mas nos preguntan antes de arrancar.',
+    items: [
+      {
+        q: 'Cuanto cuesta un proyecto?',
+        a: 'Depende del alcance. Un branding completo arranca desde USD 500 y una landing desde USD 300. Siempre damos un presupuesto cerrado antes de empezar — sin sorpresas.',
+      },
+      {
+        q: 'Cuanto tardan en entregar?',
+        a: 'Un branding tarda entre 2 y 3 semanas. Una landing o web entre 1 y 2 semanas. Proyectos mas complejos como plataformas SaaS se definen caso a caso. Damos fechas concretas desde el dia uno.',
+      },
+      {
+        q: 'Trabajan con startups chicas o solo empresas grandes?',
+        a: 'Trabajamos con proyectos de todos los tamanos. Muchos de nuestros clientes son founders en etapa temprana que necesitan una identidad profesional para salir al mercado. Nos adaptamos a cada presupuesto.',
+      },
+      {
+        q: 'Que incluye el diagnostico gratuito?',
+        a: 'Analizamos tu identidad visual actual, tu presencia digital y tu competencia directa. Te enviamos un PDF con observaciones concretas y recomendaciones accionables en 48-72 horas. Sin compromiso.',
+      },
+      {
+        q: 'Trabajan de forma remota?',
+        a: 'Si, 100%. Estamos en Bariloche pero trabajamos con clientes de toda Argentina y LATAM. Nos manejamos por videollamada, WhatsApp y herramientas colaborativas.',
+      },
+      {
+        q: 'Que pasa despues de la entrega?',
+        a: 'Incluimos 30 dias de soporte post-entrega para ajustes y dudas. Tambien ofrecemos planes de mantenimiento mensual para quienes necesitan actualizaciones continuas.',
+      },
+    ],
+  },
   footer: {
     name: 'Forma Studio',
     location: 'Bariloche, Argentina',
