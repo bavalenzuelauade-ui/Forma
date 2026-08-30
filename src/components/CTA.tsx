@@ -37,7 +37,7 @@ export default function CTA() {
           message: data.get('message'),
           _subject: 'Nuevo mensaje desde Forma Studio',
           _template: 'table',
-          _autoresponse: 'Muchas gracias por escribirnos! Recibimos tu mensaje y en breve nos vamos a estar comunicando para charlar sobre tu proyecto. Cualquier cosa mientras tanto, escribinos por WhatsApp. Gracias por confiar en Forma Studio — Bautista y equipo',
+          _autoresponse: 'Muchas gracias por contactarnos! Recibimos tu marca y ya la estamos analizando. En breve vamos a estar comunicandonos con el diagnostico completo, con ideas concretas para mejorar tu identidad. Cualquier duda mientras tanto, escribinos por WhatsApp. Gracias por confiar en Forma Studio — Bautista y equipo',
         }),
       });
       if (res.ok) {
