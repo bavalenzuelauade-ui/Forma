@@ -2,6 +2,7 @@
 
 import { useState, useRef, type FormEvent, type ChangeEvent } from 'react';
 import { useLocale } from '@/i18n/context';
+import { trackEvent } from '@/lib/analytics';
 import styles from './Diagnostic.module.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -50,6 +51,7 @@ export default function Diagnostic() {
       });
       if (res.ok) {
         setSent(true);
+        trackEvent('form_submit', 'diagnostic', 'free_diagnostic');
       } else {
         setError('Error al enviar. Intenta de nuevo.');
       }

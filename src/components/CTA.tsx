@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { useLocale } from '@/i18n/context';
+import { trackEvent } from '@/lib/analytics';
 import styles from './CTA.module.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -40,6 +41,7 @@ export default function CTA() {
       });
       if (res.ok) {
         setSent(true);
+        trackEvent('form_submit', 'contact', 'contact_form');
         form.reset();
       } else {
         setError(true);
