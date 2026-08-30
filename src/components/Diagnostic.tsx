@@ -43,6 +43,7 @@ export default function Diagnostic() {
 
     formData.append('_subject', 'Diagnostico gratuito — Forma Studio');
     formData.append('_template', 'table');
+    formData.append('_autoresponse', 'Hola! Recibimos tu marca y ya estamos trabajando en tu diagnostico gratuito. En las proximas 48-72 horas te enviamos un PDF con recomendaciones concretas. Gracias por confiar en Forma Studio!');
 
     try {
       const res = await fetch(FORMSUBMIT_URL, {

@@ -31,7 +31,7 @@ const it: Dictionary = {
     vision: 'Visione',
     visionText: 'Diventare lo studio digitale di riferimento in LATAM per startup e PMI che vogliono competere con la propria identita, tecnologia solida e strategia chiara.',
     team: 'Il team',
-    teamText: 'Siamo un gruppo di studenti di amministrazione aziendale e cybersicurezza che ha deciso di costruire qualcosa di proprio. Ci muove la qualita, le relazioni a lungo termine e la crescita reciproca con ogni cliente.',
+    teamText: 'Siamo un team giovane di Bariloche specializzato in amministrazione aziendale e cybersicurezza che ha deciso di costruire qualcosa di proprio. Ci muove la qualita, le relazioni a lungo termine e la crescita reciproca con ogni cliente.',
     aiLabel: 'Potenziati dall\'IA',
     aiText: 'Integriamo l\'intelligenza artificiale in ogni fase del processo — dal design e la strategia all\'automazione e lo sviluppo. Non sostituisce il giudizio umano, lo amplifica.',
   },
