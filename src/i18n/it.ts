@@ -20,7 +20,7 @@ const it: Dictionary = {
     titleEnd: ' che generano impatto',
     subtitle: 'Strategia, branding e tecnologia per startup che vogliono distinguersi in LATAM.',
     btnPrimary: 'Inizia un progetto',
-    btnSecondary: 'Vedi i lavori',
+    btnSecondary: 'Prova gratis',
   },
   about: {
     titlePre: 'Chi ',

@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
         <div className={styles.buttons}>
           <a href="#contacto" className={styles.btnPrimary}>{dict.hero.btnPrimary}</a>
-          <a href="#servicios" className={styles.btnSecondary}>{dict.hero.btnSecondary}</a>
+          <a href="#diagnostico" className={styles.btnSecondary}>{dict.hero.btnSecondary}</a>
         </div>
       </div>
     </section>

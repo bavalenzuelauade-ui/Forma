@@ -20,7 +20,7 @@ const en: Dictionary = {
     titleEnd: ' that make an impact',
     subtitle: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
     btnPrimary: 'Start a project',
-    btnSecondary: 'See our work',
+    btnSecondary: 'Try free',
   },
   about: {
     titlePre: 'Who we ',
