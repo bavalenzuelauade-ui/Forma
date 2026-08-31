@@ -147,11 +147,11 @@ const en: Dictionary = {
     items: [
       {
         q: 'How much does a project cost?',
-        a: 'It depends on the scope. A full branding starts from USD 500 and a landing page from USD 300. We always give a fixed quote before starting — no surprises.',
+        a: 'We adapt to the needs and budget of each client. We quote based on the project scope after an initial conversation. Our goal is to build long-term relationships, not maximize a budget.',
       },
       {
         q: 'How long does delivery take?',
-        a: 'A branding project takes 2 to 3 weeks. A landing or website takes 1 to 2 weeks. More complex projects like SaaS platforms are scoped case by case. We give concrete deadlines from day one.',
+        a: 'It depends on the project, but we always give concrete deadlines from day one. We organize to deliver fast without sacrificing quality. In our first conversation we define realistic timelines.',
       },
       {
         q: 'Do you work with small startups or only large companies?',

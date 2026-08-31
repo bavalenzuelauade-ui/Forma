@@ -147,11 +147,11 @@ const es: Dictionary = {
     items: [
       {
         q: 'Cuanto cuesta un proyecto?',
-        a: 'Depende del alcance. Un branding completo arranca desde USD 500 y una landing desde USD 300. Siempre damos un presupuesto cerrado antes de empezar — sin sorpresas.',
+        a: 'Nos ajustamos a las necesidades y presupuesto de cada cliente. Cotizamos en base al alcance del proyecto despues de una primera charla. Nuestro objetivo es generar relaciones a largo plazo, no maximizar un presupuesto.',
       },
       {
         q: 'Cuanto tardan en entregar?',
-        a: 'Un branding tarda entre 2 y 3 semanas. Una landing o web entre 1 y 2 semanas. Proyectos mas complejos como plataformas SaaS se definen caso a caso. Damos fechas concretas desde el dia uno.',
+        a: 'Depende del proyecto, pero siempre damos fechas concretas desde el dia uno. Nos organizamos para entregar rapido sin sacrificar calidad. En la primera charla definimos tiempos realistas.',
       },
       {
         q: 'Trabajan con startups chicas o solo empresas grandes?',
