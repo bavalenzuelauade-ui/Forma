@@ -140,6 +140,17 @@ const es: Dictionary = {
     formSuccess: 'Mensaje enviado. Te respondemos pronto!',
     formOr: 'o',
   },
+  showcase: {
+    titlePre: 'Tipos de ',
+    titleEm: 'web',
+    desc: 'Cada proyecto es unico. Estos son algunos estilos de diseño que podemos crear para vos.',
+    items: [
+      { title: 'Inmersiva 3D', desc: 'Experiencias visuales con movimiento, profundidad y efectos. Ideal para real estate, showrooms y marcas premium.' },
+      { title: 'Portfolio minimalista', desc: 'Diseno limpio, tipografia protagonista y foco en el contenido. Para creativos, estudios y marcas personales.' },
+      { title: 'Landing de producto', desc: 'Paginas de aterrizaje con CTA claros, disenadas para convertir. Perfectas para startups y lanzamientos.' },
+      { title: 'Dashboard / SaaS', desc: 'Paneles de gestion con datos en tiempo real, graficos y navegacion lateral. Para plataformas y productos digitales.' },
+    ],
+  },
   faq: {
     titlePre: 'Preguntas ',
     titleEm: 'frecuentes',

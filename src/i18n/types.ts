@@ -90,6 +90,12 @@ export interface Dictionary {
     formSuccess: string;
     formOr: string;
   };
+  showcase: {
+    titlePre: string;
+    titleEm: string;
+    desc: string;
+    items: { title: string; desc: string }[];
+  };
   faq: {
     titlePre: string;
     titleEm: string;

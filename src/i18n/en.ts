@@ -140,6 +140,17 @@ const en: Dictionary = {
     formSuccess: 'Message sent. We\'ll get back to you soon!',
     formOr: 'or',
   },
+  showcase: {
+    titlePre: 'Types of ',
+    titleEm: 'web',
+    desc: 'Every project is unique. Here are some design styles we can build for you.',
+    items: [
+      { title: 'Immersive 3D', desc: 'Visual experiences with motion, depth, and effects. Perfect for real estate, showrooms, and premium brands.' },
+      { title: 'Minimal portfolio', desc: 'Clean design, bold typography, and content-first approach. For creatives, studios, and personal brands.' },
+      { title: 'Product landing', desc: 'Landing pages with clear CTAs, designed to convert. Great for startups and product launches.' },
+      { title: 'Dashboard / SaaS', desc: 'Management panels with real-time data, charts, and sidebar navigation. For platforms and digital products.' },
+    ],
+  },
   faq: {
     titlePre: 'Frequently asked ',
     titleEm: 'questions',
