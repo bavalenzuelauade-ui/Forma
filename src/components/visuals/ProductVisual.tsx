@@ -71,15 +71,15 @@ export default function ProductVisual({ inView }: { inView: boolean }) {
         <div className={styles.dashBody}>
           <div className={styles.metrics}>
             <div className={styles.metric}>
-              <div className={styles.metricValue} ref={dv1}>0</div>
+              <div className={styles.metricValue} ref={dv1}>2.400</div>
               <div className={styles.metricLabel}>Users</div>
             </div>
             <div className={styles.metric}>
-              <div className={styles.metricValue} ref={dv2}>$0</div>
+              <div className={styles.metricValue} ref={dv2}>$18k</div>
               <div className={styles.metricLabel}>Revenue</div>
             </div>
             <div className={styles.metric}>
-              <div className={styles.metricValue} ref={dv3}>0%</div>
+              <div className={styles.metricValue} ref={dv3}>94%</div>
               <div className={styles.metricLabel}>Retention</div>
             </div>
           </div>
@@ -92,11 +92,11 @@ export default function ProductVisual({ inView }: { inView: boolean }) {
       </div>
 
       <div className={styles.floatingStat} style={{ top: 20, right: 20, animationDelay: '0.5s' }}>
-        <div className={styles.statValue} ref={fs1}>0%</div>
+        <div className={styles.statValue} ref={fs1}>99.8%</div>
         <div className={styles.statLabel}>Uptime</div>
       </div>
       <div className={styles.floatingStat} style={{ bottom: 24, left: 20, animationDelay: '1.5s' }}>
-        <div className={styles.statValue} ref={fs2}>0</div>
+        <div className={styles.statValue} ref={fs2}>1.200</div>
         <div className={styles.statLabel}>Activos</div>
       </div>
     </>

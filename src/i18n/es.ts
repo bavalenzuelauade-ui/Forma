@@ -31,7 +31,7 @@ const es: Dictionary = {
     vision: 'Vision',
     visionText: 'Ser el estudio digital de referencia en LATAM para startups y pymes que buscan competir con identidad propia, tecnologia solida y estrategia clara.',
     team: 'El equipo',
-    teamText: 'Somos un equipo joven de Bariloche especializado en administracion de empresas y ciberseguridad que decidio construir algo propio. Nos mueve la calidad, las relaciones a largo plazo y el crecimiento mutuo con cada cliente.',
+    teamText: 'Somos un equipo joven de Bariloche especializado en branding y tecnologia que decidio construir algo propio. Nos mueve la calidad, las relaciones a largo plazo y el crecimiento mutuo con cada cliente.',
     aiLabel: 'Potenciados por IA',
     aiText: 'Integramos inteligencia artificial en cada etapa del proceso — desde el diseno y la estrategia hasta la automatizacion y el desarrollo. No reemplaza el criterio humano, lo amplifica.',
   },

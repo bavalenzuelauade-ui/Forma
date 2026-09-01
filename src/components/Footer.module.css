@@ -14,6 +14,28 @@
   align-items: center;
 }
 
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  color: var(--text3);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.socialLink:hover {
+  color: var(--text);
+}
+
 .legalLinks {
   display: flex;
   gap: 20px;
@@ -43,6 +65,10 @@
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+  }
+
+  .right {
+    gap: 16px;
   }
 
   .legalLinks {

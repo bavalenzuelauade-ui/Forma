@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Forma Studio — Digital Brand Studio',
-  description: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
+  description: 'Estrategia, branding y tecnologia para startups que quieren destacar en LATAM.',
   metadataBase: new URL('https://formaarg.netlify.app'),
   icons: {
     icon: '/favicon.svg',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Forma Studio — Digital Brand Studio',
-    description: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
+    description: 'Estrategia, branding y tecnologia para startups que quieren destacar en LATAM.',
     url: 'https://formaarg.netlify.app',
     siteName: 'Forma Studio',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Forma Studio — Digital Brand Studio',
-    description: 'Strategy, branding, and technology for startups looking to stand out in LATAM.',
+    description: 'Estrategia, branding y tecnologia para startups que quieren destacar en LATAM.',
     images: ['/og-image.png'],
   },
   robots: {
