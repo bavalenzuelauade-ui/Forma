@@ -7,7 +7,6 @@ function detectLocale(): string {
   if (typeof navigator === 'undefined') return 'es';
   const lang = navigator.language?.toLowerCase() ?? '';
   if (lang.startsWith('en')) return 'en';
-  if (lang.startsWith('it')) return 'it';
   return 'es';
 }
 

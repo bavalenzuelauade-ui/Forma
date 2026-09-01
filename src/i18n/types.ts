@@ -119,11 +119,10 @@ export interface Dictionary {
   };
 }
 
-export const locales = ['es', 'en', 'it'] as const;
+export const locales = ['es', 'en'] as const;
 export type Locale = (typeof locales)[number];
 
 export const localeNames: Record<Locale, string> = {
   es: 'ES',
   en: 'EN',
-  it: 'IT',
 };

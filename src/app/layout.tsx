@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'Forma Studio',
     type: 'website',
     locale: 'es_AR',
-    alternateLocale: ['en_US', 'it_IT'],
+    alternateLocale: ['en_US'],
     images: [
       {
         url: '/og-image.png',
@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     languages: {
       es: 'https://formaarg.netlify.app/es',
       en: 'https://formaarg.netlify.app/en',
-      it: 'https://formaarg.netlify.app/it',
     },
   },
 };
